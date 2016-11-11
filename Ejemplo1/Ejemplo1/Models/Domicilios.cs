@@ -17,7 +17,7 @@ namespace Ejemplo1.Models
         public int Cp { get; set; }
 
         [Display(Name ="Usuario")]
-        public int UsuariosId { get; set; }
+        public int UsuarioId { get; set; }
 
         public virtual IEnumerable<Usuarios> Usuarios { get; set; }
     }

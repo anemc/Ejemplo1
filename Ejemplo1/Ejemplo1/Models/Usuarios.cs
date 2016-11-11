@@ -14,5 +14,7 @@ namespace Ejemplo1.Models
         public int UsuarioId { get; set; }
         public string Usuario { get; set; }
         public string Contrasena { get; set; }
+
+        public virtual IEnumerable<Domicilios> Domicilios { get; set; }
     }
 }
