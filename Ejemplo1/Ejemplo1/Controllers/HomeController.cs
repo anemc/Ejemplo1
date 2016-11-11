@@ -22,6 +22,12 @@ namespace Ejemplo1.Controllers
 
         public ActionResult Contact()
         {
+
+            var db = Utils.Ejemplo1Context;
+
+            db.Domicilios.Add(new Models.Domicilios() {DomicilioId=0, Domicilio="2 de Abril", Cp=91910, Numero=41, UsuariosId=1 });
+            db.SaveChanges();
+
             ViewBag.Message = "Your contact page.";
 
             return View();
