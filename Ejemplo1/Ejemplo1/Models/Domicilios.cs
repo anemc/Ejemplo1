@@ -15,7 +15,6 @@ namespace Ejemplo1.Models
         public string Domicilio { get; set; }
         public int Numero { get; set; }
         public int Cp { get; set; }
-
         [Display(Name ="Usuario")]
         public int UsuarioId { get; set; }
 

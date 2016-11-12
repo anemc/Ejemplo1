@@ -34,6 +34,8 @@ namespace Ejemplo1
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            var db = Utils.Ejemplo1Context;
         }
     }
 }

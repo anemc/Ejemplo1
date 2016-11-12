@@ -16,19 +16,22 @@ namespace Ejemplo1.Controllers
         }
         public ActionResult Nueva()
         {
-            var usuarios = Utils.Ejemplo1Context.Usuarios.Select(c => new SelectListItem()
+            var users = Utils.Ejemplo1Context.Usuarios.Select(c => new SelectListItem()
             {
                 Value = c.UsuarioId.ToString(),
                 Text = c.Usuario
             }).ToList();
 
-            ViewBag.Categorias = new SelectList(usuarios, "Value", "Text");
+            ViewBag.Usuarios = new SelectList(users, "Value", "Text");
 
             return View();
         }
 
-        public ActionResult Guardar()
+        public ActionResult Guardar(Domicilios Domicilios)
         {
+            var db = Utils.Ejemplo1Context;
+            db.Domicilios.Add(Domicilios);
+            db.SaveChanges();
             return Content("Guardado");
         }
     }
